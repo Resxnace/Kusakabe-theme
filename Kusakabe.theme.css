@@ -1,1 +1,38 @@
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
 
+/* Background */
+body {
+  background: url("https://cdn.discordapp.com/attachments/1331917240819515484/1500056996940877874/atsuya-kusakabe-jujutsu-kaisen-s03-culling-game-4k-wallpaper-uhdpaper.com-2665l.jpg?ex=69f70c71&is=69f5baf1&hm=50397369679c64e23f800c6b89446fb568ff4a9410731b7dec9ab6be59c94f0a") center/cover no-repeat fixed;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 20, 30, 0.5);
+  pointer-events: none;
+}
+
+/* Glass effect (more stable selectors) */
+[class*="appMount"] {
+  background: rgba(0, 10, 20, 0.6) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Panels */
+[class*="container"] {
+  background: rgba(20, 30, 50, 0.4) !important;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
+/* Glow */
+[class*="message"]:hover {
+  box-shadow: 0 0 10px rgba(0,255,200,0.3);
+}
+
+/* Accent */
+:root {
+  --brand-experiment: #00ffd5;
+}
